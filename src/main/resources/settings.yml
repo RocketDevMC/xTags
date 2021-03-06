@@ -1,0 +1,42 @@
+###########################################
+#     __ __  ______   ____   ____  _____  #
+#    |  |  ||      | /    | /    |/ ___/  #
+#    |  |  ||      ||  o  ||   __(   \_   #
+#    |_   _||_|  |_||     ||  |  |\__  |  #
+#    |     |  |  |  |  _  ||  |_ |/  \ |  #
+#    |  |  |  |  |  |  |  ||     |\    |  #
+#    |__|__|  |__|  |__|__||___,_| \___|  #
+#                                         #
+# The main configuration file for xTags   #
+# Thank you for purchasing the plugin :)  #
+#                                         #
+# PLACEHOLDERS:                           #
+#  %xtags_tag% - The formatted tag        #
+#  %xtags_tagName% - The tag name         #
+###########################################
+
+LICENSE-KEY: '' #Please place the license key sent to you here
+#By default, the plugin will register placeholderapi if you have it. If you're using essentials chat or a plugin that doesn't support placeholder api,
+#please set the below option to true, and then the placeholder {XTAGS_TAG} and {XTAGS_TAGNAME} will work.
+HOOK-CHAT: false
+
+DATABASE:
+  #MONGO requires a Mongo database
+  #FLATFILE will just make the tags save in the plugin folder, no database needed, but is limited to only one server ubstabce
+  STORAGE-TYPE: 'FLATFILE' #Options: MONGO, FLATFILE, MYSQL
+  MYSQL: #Credentials for MySQL if the storage type is MYSQL
+    ADDRESS: '127.0.0.1' #MySQL DB Address
+    PORT: 3306 #MySQL Port
+    DATABASE: 'xTags' #MySQL Database name
+    USERNAME: 'root' #MySQL Username
+    PASSWORD: '' #MySQL Password
+    USE-SSL: false #Should SSL be used for connection?
+  MONGO: #Credentials for if the storage is MONGO
+    ADDRESS: '127.0.0.1' #The address of the mongo database
+    PORT: 27017 #The port of the mongo database
+    AUTH: #Mongo auth options
+      ENABLED: false #Should auth be used?
+      USERNAME: 'username' #What username should we auth with?
+      PASSWORD: 'password' #What password should we auth with?
+      DB: 'admin' #What's the auth database
+    DATABASE: 'xTags' #What should the database be called?

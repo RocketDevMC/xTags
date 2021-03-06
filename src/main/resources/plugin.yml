@@ -1,0 +1,5 @@
+name: xTags
+version: ${project.version}
+author: InvisRaidinq
+main: xyz.invisraidinq.tags.TagsPlugin
+softdepend: [PlaceholderAPI]

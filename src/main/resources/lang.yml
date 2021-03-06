@@ -1,0 +1,64 @@
+GENERAL:
+  INVALID-EXECUTOR: '&cThis is a player command only!' #Message to send the console when they execute an invalid command
+
+XTAG: #Lang for the xtag command
+  IMPORT:
+    IMPORT-CONFIRMATION: '&cAre you sure you want to do this? Doing so will remove all your current tags and import from tags.yml. Please type this command again in 30 seconds to proceed' #Message to send to a player to confirm the tag import
+    IMPORT-LOADED: '&eLoaded tag &f%tagName% &ewith format %format% &eand permission &f%permission%' #Message for each imported tag
+  CREATE:
+    USAGE: '&cUsage: /xtag create <name> <format>' #Usage for /xtag create
+    TAG-ALREADY-EXISTS: '&cThat tag already exists!' #Message if the tag exists
+    CREATED: '&eSuccessfully created the tag &f%tagName% &ewith format %format% &eand permission &f%permission%' #Message to send when the tag is created
+  DELETE:
+    USAGE: '&cUsage: /xtag delete <tag>' #Usage for /xtag delete
+    TAG-DOES-NOT-EXIST: '&cThat tag does not exist!' #Message if the tag does not exist
+    TAG-DELETED: '&aThe tag has been deleted!' #Message to let a user know a tag has been deleted
+    REMOVE-DELETED-TAG-FROM-PLAYERS: false #Should the deleted tag be removed from all players who have it active?
+  INFO:
+    USAGE: '&cUsage: /xtag info <tag>'
+    TAG-DOES-NOT-EXIST: '&cThat tag does not exist!' #Message if the tag does not exist
+    INFO-MESSAGE:
+      - '%spacer%'
+      - '&eViewing information on &a%tagName%'
+      - ''
+      - '&eName: &f%tagName%'
+      - '&eFormat: &f%tagFormat%'
+      - '&ePermission: &f%tagPermission%'
+      - '%spacer%'
+  SETPERMISSION:
+    USAGE: '&cUsage: /xtag setpermission <tag> <permission>'
+    TAG-DOES-NOT-EXIST: '&cThat tag does not exist!' #Message if the tag does not exist
+    PERMISSION-UPDATED: '&eYou have &aupdated &ethe permission of &a%tagName% &eto &a%permission%'
+
+TAG: #Lang for the /tag command
+  TAG-CHANGED: '&eYou have set your tag to %tagFormat%' #Placeholders: %tagName%, %tagFormat% - message to send when a tag has been changed
+  TAG-NOT-UNLOCKED: '&eYou do not own this tag! Purchase it at &fstore.yourserver.net' #Messaage to send if a player hasn't unlocked a tag
+  TAG-REMOVED: '&eYou have removed your tag!' #Message to send when a tag has been removed
+  MENU: #Config for the tags menu
+    TITLE: '&dTags Menu' #Menu name
+    SIZE: 3 #How many rows should the TagGUI have?
+    UNLOCKED-TAG: #Unlocked tag item
+      MATERIAL: NAME_TAG #What material should the item be?
+      ENCHANTED: false #Should the item be enchanted? - ONLY works on 1.8+
+      #Placeholders: %tagName%, %tagFormat%, %player%
+      ITEM-NAME: '%tagFormat%' #What should the name of the item be?
+      ITEM-LORE: #What should the lore of the item be?
+        - ''
+        - '&eChat Format: &f%player% %tagFormat%'
+        - '&7&o(( &f&oClick &7&oto equip this tag ))'
+    LOCKED-TAG: #Locked tag item
+      MATERIAL: BEDROCK #What material should the item be?
+      ENCHANTED: false #Should the item be enchanted? - ONLY WORKS ON 1.8+
+      #Placeholders: %tagName%, %tagFormat%, %player%
+      ITEM-NAME: '%tagFormat%' #What should the name of the item be?
+      ITEM-LORE: #What should the lore of the item be?
+        - ''
+        - '&7&o(( &7&oPurchase this at &f&ostore.yourserver.net &7&o))'
+    REMOVE-TAG: #Remove tag item
+      MATERIAL: REDSTONE_BLOCK #What material should the item be?
+      ENCHANTED: false #Should the item be enchanted? - ONLY works on 1.8+
+      #Placeholders: %tagName%, %tagFormat%, %player%
+      ITEM-NAME: '&cRemove your tag' #What should the name of the item be?
+      ITEM-LORE: #What should the lore of the item be?
+        - ''
+        - '&7&o(( &f&oClick &7&oto remove your tag ))'

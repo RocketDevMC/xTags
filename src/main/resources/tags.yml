@@ -1,0 +1,44 @@
+#######################################################
+# If you're not saving as flatfile, this file is only #
+# used for /xtag import                               #
+# The NAME and the thing with the colons must be the  #
+# same. E.g.                                          #
+# OG:                                                 #
+#   NAME: OG                                          #
+#######################################################
+OG: #Must use the same as the NAME option
+  NAME: OG
+  FORMAT: '&8[&c&lOG&8]'
+  PERMISSION: xtags.tag.og
+Banana: #Must use the same as the NAME option
+  NAME: Banana
+  FORMAT: '&8[&e&lBanana&8]'
+  PERMISSION: xtags.tag.Banana
+Dollars: #Must use the same as the NAME option
+  NAME: Dollars
+  FORMAT: '&8[&6&l$$$&8]'
+  PERMISSION: xtags.tag.dollars
+xTag: #Must use the same as the NAME option
+  NAME: xTag
+  FORMAT: '&8[&f&lX&4&lTAG&8]'
+  PERMISSION: xtags.tag.xtag
+Hacker: #Must use the same as the NAME option
+  NAME: Hacker
+  FORMAT: '&8[&d&lHacker&8]'
+  PERMISSION: xtags.tag.hacker
+Abuse: #Must use the same as the NAME option
+  NAME: Abuse
+  FORMAT: '&8[&f&l#&d&lAbuse&8]'
+  PERMISSION: xtags.tag.abuse
+Heart: #Must use the same as the NAME option
+  NAME: Heart
+  FORMAT: "&8[&c&l<34&8]"
+  PERMISSION: xtags.tag.heart
+Tick: #Must use the same as the NAME option
+  NAME: Tick
+  FORMAT: "&8[&a\xe2\u0153\u201d&8]"
+  PERMISSION: xtags.tag.tick
+NumberOne: #Must use the same as the NAME option
+  NAME: NumberOne
+  FORMAT: '&8[&f&l#&d&l1&8]'
+  PERMISSION: xtags.tag.one
