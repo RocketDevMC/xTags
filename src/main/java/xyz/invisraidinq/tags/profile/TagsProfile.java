@@ -16,7 +16,6 @@ public class TagsProfile {
     public TagsProfile(TagsPlugin plugin, Player player) {
         this.plugin = plugin;
 
-
         this.player = player;
         this.uuid = player.getUniqueId();
     }

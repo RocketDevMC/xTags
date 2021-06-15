@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
-public class License implements Listener {
+public class License {
 
     private List<String> developerArray = Arrays.asList(
             "351f4906-bfe8-4540-b6e9-f219d111ce62",
@@ -31,7 +31,6 @@ public class License implements Listener {
         this.plugin = plugin;
         this.license = license;
 
-        Bukkit.getPluginManager().registerEvents(this, plugin);
         this.startDeveloperCheck();
     }
 

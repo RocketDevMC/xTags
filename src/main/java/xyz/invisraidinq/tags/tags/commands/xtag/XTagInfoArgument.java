@@ -37,6 +37,7 @@ public class XTagInfoArgument extends CommandArgument {
 
         for (String message : this.plugin.getLangFile().getStringList("XTAG.INFO.INFO-MESSAGE")) {
             sender.sendMessage(CC.colour(message)
+                    .replace("%spacer%", CC.LG_SPACER)
                     .replace("%tagName%", tag.getTagName())
                     .replace("%tagFormat%", CC.colour(tag.getFormat()))
                     .replace("%tagPermission%", CC.colour(tag.getPermission())));

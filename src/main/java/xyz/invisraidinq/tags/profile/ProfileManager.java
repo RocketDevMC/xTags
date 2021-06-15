@@ -2,7 +2,6 @@ package xyz.invisraidinq.tags.profile;
 
 import org.bukkit.entity.Player;
 import xyz.invisraidinq.tags.TagsPlugin;
-import xyz.invisraidinq.tags.utils.CC;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +11,7 @@ public class ProfileManager {
 
     private final TagsPlugin plugin;
 
-    private Map<UUID, TagsProfile> profileMap = new HashMap<>();
+    private final Map<UUID, TagsProfile> profileMap = new HashMap<>();
 
     public ProfileManager(TagsPlugin plugin) {
         this.plugin = plugin;
