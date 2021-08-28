@@ -21,7 +21,6 @@ public class MongoDBImpl implements IDatabase {
     private final TagsPlugin plugin;
 
     private final MongoClient mongoClient;
-    private final MongoDatabase mongoDatabase;
     private final MongoCollection<Document> tagsCollection;
     private final MongoCollection<Document> profilesCollection;
 
@@ -41,10 +40,10 @@ public class MongoDBImpl implements IDatabase {
             this.mongoClient = new MongoClient(serverAddress);
         }
 
-        this.mongoDatabase = this.mongoClient.getDatabase(plugin.getSettingsFile().getString(databasePath + "DATABASE"));
+        MongoDatabase mongoDatabase = this.mongoClient.getDatabase(plugin.getSettingsFile().getString(databasePath + "DATABASE"));
 
-        this.tagsCollection = this.mongoDatabase.getCollection(plugin.getSettingsFile().getString("Tags"));
-        this.profilesCollection = this.mongoDatabase.getCollection(plugin.getSettingsFile().getString("Profiles"));
+        this.tagsCollection = mongoDatabase.getCollection("Tags");
+        this.profilesCollection = mongoDatabase.getCollection("Profiles");
 
         this.loadTags();
     }
@@ -102,7 +101,7 @@ public class MongoDBImpl implements IDatabase {
 
         document.put("player", profile.getPlayer().getName());
         document.put("uuid", profile.getUuid().toString());
-        document.put("tag", profile.getTag().getTagName());
+        document.put("tag", profile.getTag() != null ? profile.getTag().getTagName() : null);
 
         this.profilesCollection.replaceOne(Filters.eq("uuid", player.getUniqueId().toString()), document, new UpdateOptions().upsert(true));
         this.plugin.getProfileManager().getProfileMap().remove(player.getUniqueId());

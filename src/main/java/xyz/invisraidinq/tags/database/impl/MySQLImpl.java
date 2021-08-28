@@ -124,7 +124,7 @@ public class MySQLImpl implements IDatabase {
 
             profileUpdateStatement.setString(1, player.getName());
             profileUpdateStatement.setString(2, player.getUniqueId().toString());
-            profileUpdateStatement.setString(3, profile.getTag().getTagName());
+            profileUpdateStatement.setString(3, profile.getTag() != null ? profile.getTag().getTagName() : null);
 
             profileUpdateStatement.executeUpdate();
         } catch (Exception e) {
