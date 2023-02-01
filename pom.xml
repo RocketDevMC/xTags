@@ -44,7 +44,11 @@
     <repositories>
         <repository>
             <id>placeholderapi</id>
-            <url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -77,12 +81,10 @@
         </dependency>
 
         <dependency>
-            <groupId>com.samjakob</groupId>
+            <groupId>com.github.SamJakob</groupId>
             <artifactId>SpiGUI</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>v1.2.3</version>
         </dependency>
-
-
     </dependencies>
 
 </project>

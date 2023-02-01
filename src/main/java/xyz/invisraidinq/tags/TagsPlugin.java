@@ -7,7 +7,6 @@ import xyz.invisraidinq.tags.database.IDatabase;
 import xyz.invisraidinq.tags.database.impl.FlatFileImpl;
 import xyz.invisraidinq.tags.database.impl.MongoDBImpl;
 import xyz.invisraidinq.tags.database.impl.MySQLImpl;
-import xyz.invisraidinq.tags.license.LicenseChecker;
 import xyz.invisraidinq.tags.profile.ProfileManager;
 import xyz.invisraidinq.tags.profile.listeners.ProfileJoinListener;
 import xyz.invisraidinq.tags.profile.listeners.ProfileQuitListener;
@@ -38,10 +37,6 @@ public class TagsPlugin extends JavaPlugin {
         long start = System.currentTimeMillis();
 
         this.settingsFile = new ConfigFile(this, "settings.yml");
-
-        if (!new LicenseChecker().checkLicenseValidity(this)) {
-            return;
-        }
 
         this.langFile = new ConfigFile(this, "lang.yml");
         this.tagsFile = new ConfigFile(this, "tags.yml");

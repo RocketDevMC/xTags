@@ -17,7 +17,7 @@ public class XTagCreateArgument extends CommandArgument implements Listener {
         super("create", "Create a tag in-game", "new");
 
         this.plugin = plugin;
-        Bukkit.getPluginManager().registerEvents(this, plugin); //Register here so it doesn't create two instances and fuck up
+        Bukkit.getPluginManager().registerEvents(this, plugin); //Register here so it doesn't create two instances
     }
 
     @Override
